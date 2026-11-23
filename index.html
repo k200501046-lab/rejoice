@@ -77,6 +77,27 @@
     @media (max-width: 360px) {
       .schedule li { grid-template-columns: 3.1rem minmax(0, 1fr); }
     }
+    .meal-content { min-width: 0; }
+    .meal-content figure {
+      margin: .65rem 0 .4rem;
+      max-width: 24rem;
+    }
+    .meal-content img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: .85rem;
+      background: #f8e6d4;
+      color: #452d22;
+      font-size: .9rem;
+    }
+    .meal-content figcaption {
+      margin-top: .25rem;
+      font-size: .78rem;
+      color: #695041;
+    }
+    .meal-content a, .untimed { color: #803f28; }
   </style>
 </head>
 <body>
@@ -100,13 +121,54 @@
       <h3>1일차 · 11월 30일(월)</h3>
       <ul class="schedule">
         <li><time datetime="08:30">08:30</time><span>각 집결지에서 출발<small>중리IC / 안성</small></span></li>
-        <li><time datetime="12:00">12:00</time><span>주문진 시장 도착 및 점심 식사<small>동성호 횟집</small></span></li>
+        <li class="meal">
+          <time datetime="12:00">12:00</time>
+          <div class="meal-content">
+            <strong>주문진 시장 도착 및 점심 식사</strong>
+            <small>각종 회 · 동성호 횟집</small>
+            <figure>
+              <img src="https://d12zq4w4guyljn.cloudfront.net/750_750_20241217094106_photo1_df64a259af6a.webp" alt="모둠회 예시" loading="lazy" decoding="async">
+              <figcaption>예시 사진 · <a href="https://www.diningcode.com/profile.php?rid=qwaEkiOZcDjQ">다이닝코드</a></figcaption>
+            </figure>
+          </div>
+        </li>
         <li><time datetime="14:00">14:00</time><span>주문진 해수욕장 족구장 도착 후 운동</span></li>
         <li><time datetime="17:30">17:30</time><span>라카이 리조트 숙소 이동</span></li>
-        <li><time datetime="18:00">18:00</time><span>저녁 식사<small>생선구이 또는 생선찜</small></span></li>
-        <li><time datetime="19:30">19:30</time><span>유명 카페 티타임</span></li>
+        <li class="meal">
+          <time datetime="18:00">18:00</time>
+          <div class="meal-content">
+            <strong>저녁 식사</strong>
+            <small>칼제비 · 강릉칼제비(강릉본점)</small>
+            <figure>
+              <img src="https://www.okitchen.co.kr/pds/upfile/2022-07-28_115059673%5B3%5D.jpg" alt="칼제비 예시" loading="lazy" decoding="async">
+              <figcaption>예시 사진 · <a href="https://www.okitchen.co.kr/category/detail?idx=1325">오뚜기레시피</a></figcaption>
+            </figure>
+          </div>
+        </li>
+        <li class="meal">
+          <time datetime="19:30">19:30</time>
+          <div class="meal-content">
+            <strong>티타임</strong>
+            <small>유명 카페</small>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1582152747136-af63c112fce5?auto=format&amp;w=900&amp;q=80" alt="카페 라테 예시" loading="lazy" decoding="async">
+              <figcaption>예시 사진 · <a href="https://unsplash.com/photos/white-ceramic-cup-with-saucer-on-brown-wooden-table-tk2ifGN60xo">Unsplash</a></figcaption>
+            </figure>
+          </div>
+        </li>
         <li><time datetime="20:30">20:30</time><span>숙소 이동</span></li>
         <li><time datetime="21:00">21:00</time><span>레크리에이션<small>윷놀이 등</small></span></li>
+        <li class="meal">
+          <span class="untimed" aria-hidden="true">—</span>
+          <div class="meal-content">
+            <strong>야식</strong>
+            <small>피자와 치킨 · 시간 미정</small>
+            <figure>
+              <img src="https://www.fcmedia.co.kr/news/photo/201603/6870_11313_4533.png" alt="피자와 치킨 예시" loading="lazy" decoding="async">
+              <figcaption>예시 사진 · <a href="https://www.fcmedia.co.kr/news/articleView.html?idxno=6870">창업&amp;프랜차이즈</a></figcaption>
+            </figure>
+          </div>
+        </li>
         <li><time datetime="23:30">23:30</time><span>취침</span></li>
       </ul>
       <div class="resort-banner">
@@ -114,10 +176,30 @@
         <h3>2일차 · 12월 1일(화)</h3>
       </div>
       <ul class="schedule">
-        <li><time datetime="07:30">07:30</time><span>아침 식사 이동<small>근처 초당순두부 맛집</small></span></li>
+        <li class="meal">
+          <time datetime="07:30">07:30</time>
+          <div class="meal-content">
+            <strong>아침 식사 이동</strong>
+            <small>초당순두부</small>
+            <figure>
+              <img src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=5c0f278a-022f-4b1c-b476-e1d41378a368" alt="초당순두부 예시" loading="lazy" decoding="async">
+              <figcaption>예시 사진 · <a href="https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=f1a5b5da-f2b8-4f90-b612-316d3b2e49d8">한국관광공사</a></figcaption>
+            </figure>
+          </div>
+        </li>
         <li><time datetime="09:00">09:00</time><span>숙소에서 정리 후 풋살장 이동</span></li>
         <li><time datetime="10:00">10:00</time><span>풋살<small>주문진 해수욕장</small></span></li>
-        <li><time datetime="11:30">11:30</time><span>점심 식사 이동<small>장치찜 &amp; 도루묵찌개</small></span></li>
+        <li class="meal">
+          <time datetime="11:30">11:30</time>
+          <div class="meal-content">
+            <strong>점심 식사 이동</strong>
+            <small>장치찜(생선 및 해물) 예정</small>
+            <figure>
+              <img src="https://media.triple.guide/triple-cms/c_limit%2Cf_auto%2Ch_1024%2Cw_1024/fea74379-300e-418b-acaf-f1271cafdc6b.jpeg" alt="장치찜 예시" loading="lazy" decoding="async">
+              <figcaption>예시 사진 · <a href="https://triple.guide/restaurants/6acbd6f2-f9d6-4844-a046-5e67fc703c07">트리플</a></figcaption>
+            </figure>
+          </div>
+        </li>
         <li><time datetime="13:00">13:00</time><span>귀가</span></li>
       </ul>
     </section>
@@ -215,4 +297,5 @@
   </script>
 </body>
 </html>
+
 
